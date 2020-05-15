@@ -1,0 +1,96 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<div class="main-body">
+  
+<nav id="navbar">
+  <header>Js Documentation</header>
+  <a href="#Introduction" class="nav-link">Introduction</a>
+  <a href="#Javascript" class="nav-link">Javascript</a>
+  <a href="#Variables" class="nav-link">Variables</a>
+  <a href="#Scope" class="nav-link">Scope</a>
+  <a href="#Function" class="nav-link">Function</a>
+</nav>
+
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <p>The Mosaic web browser was released in 1993. As the first browser with a graphical user interface accessible to non-technical people, it played a prominent role in the rapid growth of the nascent World Wide Web. The lead developers of Mosaic then founded the Netscape corporation, which released a more polished browser, Netscape Navigator, in 1994. Navigator quickly became the most used browser.
+</p><p>
+During these formative years of the Web, web pages could only be static, lacking the capability for dynamic behavior after the page was loaded in the browser. There was a desire in the burgeoning web development scene to remove this limitation, so in 1995, Netscape decided to add a scripting language to Navigator. They pursued two routes to achieve this: collaborating with Sun Microsystems to embed the Java programming language, while also hiring Brendan Eich to embed the Scheme language.</p>
+  </section>
+  <section class="main-section" id="Javascript">
+    <header>Javascript</header>
+    <p>JavaScript (/ˈdʒɑːvəˌskrɪpt/), often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
+    </p>
+    <p>
+Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web. JavaScript enables interactive web pages and is an essential part of web applications. The vast majority of websites use it for client-side page behavior, and all major web browsers have a dedicated JavaScript engine to execute it.</p>
+    <code>
+      function greetMe(yourName) {
+      alert("Hello " + yourName);
+      }
+      greetMe("World");
+    </code>
+    <br>
+    <code>
+      function greetMe(yourName) {
+      alert("Hello " + yourName);
+      }
+      greetMe("World");
+    </code>
+    <ul>
+      <li>Variables</li>
+      <li>Functions</li>
+      <li>Control Flow</li>
+      <li>Promises</li>
+      <li>The Strange Parts</li>
+    </ul>
+  </section>
+  <section class="main-section" id="Variables">
+    <header>Variables</header>
+    <p>Variable means anything that can vary. JavaScript includes variables which hold the data value and it can be changed anytime.
+JavaScript uses reserved keyword var to declare a variable. A variable must have a unique name. You can assign a value to a variable using equal to (=) operator when you declare it or before using it.</p>
+    <p>C# or Java has strongly typed variables. It means variable must be declared with a particular data type, which tells what type of data the variable will hold.
+JavaScript variables are loosely-typed which means it does not require a data type to be declared. You can assign any type of literal values to a variable e.g. string, integer, float, boolean etc..</p>
+    <code>'use strict';
+function foo() {
+  var x = 1;  
+  function bar() {
+    var y = 2;
+    console.log(x); // 1 (function `bar` closes over `x`)
+    console.log(y); // 2 (`y` is in scope)
+  }
+  bar();
+  console.log(x); // 1 (`x` is in scope)
+  console.log(y); // ReferenceError in strict mode, `y` is scoped to `bar`
+}
+
+foo();</code>
+  </section>
+  <section class="main-section" id="Scope">
+    <header>Scope</header>
+    <p>JavaScript has global scope and local scope.
+Variables declared and initialized outside any function become global variables.
+Variables declared and initialized inside function becomes local variables to that function.
+Variables declared without var keyword inside any function becomes global variables automatically.
+    </p><p>Global variables can be accessed and modified anywhere in the program.
+Local variables cannot be accessed outside the function declaration.
+Global variable and local variable can have same name without affecting each other.
+JavaScript does not allow block level scope inside { } brackets.</p>
+    <code>
+      if (true) {
+      var x = 5;
+      }
+      console.log(x); //5
+    </code>
+  </section>
+  <section class="main-section" id="Function">
+    <header>Function</header>
+    <p>Function store instruction to reusable code</p>
+    <p>They are one the fundamentals software</p>
+    <code>(param1, param2, …, paramN) => { statements } 
+(param1, param2, …, paramN) => expression
+// equivalent to: => { return expression; }</code>
+  </section>
+  
+  
+</main>
+  </div>
